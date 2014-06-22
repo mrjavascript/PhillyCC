@@ -1,0 +1,73 @@
+﻿<!doctype html>
+
+<html lang="en">
+<head>
+    <title>Something Something</title>
+    <style type="text/css">
+
+        @@keyframes slide
+        {
+            0%
+            {
+                top: 0;
+                left: 0;
+            }
+
+            50%
+            {
+                top: 100px;
+                left: 305px;
+            }
+            
+            100%
+            {
+                top: 0;
+                left: 610px;
+            }
+            
+        }
+
+        .stage
+        {
+        height: 150px;
+        position: relative;
+        }
+
+        .ball
+        {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: green;
+            position: absolute
+        }
+
+        .stage:hover .ball
+        {
+            animation-name: slide;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+        animation-delay: 0s;
+        animation-fill-mode: forwards;
+        }
+
+        .stage:active .ball
+        {
+            animation-play-state: paused;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+
+    <div class="stage">
+
+        <figure class="ball"></figure>
+
+    </div>
+
+</body>
+</html>
